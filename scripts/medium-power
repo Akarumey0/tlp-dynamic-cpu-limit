@@ -1,0 +1,2 @@
+#!/bin/bash
+/usr/bin/cpupower frequency-set -u 2.6GHz
