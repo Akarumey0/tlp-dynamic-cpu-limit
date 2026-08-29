@@ -1,0 +1,13 @@
+[Unit]
+Description=CPU frequency limit based on TLP power profile
+After=tlp.service
+Wants=tlp.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/libexec/cpu-power-profiles/profile-listener.sh
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
